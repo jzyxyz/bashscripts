@@ -1,0 +1,19 @@
+#! /bin/bash
+
+_revstr() {
+    local str=$1
+    _REVSTR=''
+    while [ -n "$str" ]
+    do
+        allbutfirst=${str#?}
+        first=${str%"$allbutfirst"}
+        _REVSTR=$first$_REVSTR
+        str=$allbutfirst
+    done
+
+}
+revstr() {
+    _revstr "helloworld" && echo $_REVSTR
+}
+
+revstr

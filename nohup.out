@@ -1,0 +1,8 @@
+
+(gedit:32151): GVFS-WARNING **: 20:56:56.564: can't init metadata tree /home/zhongyuan/.local/share/gvfs-metadata/home: open: Permission denied
+
+(gedit:32151): GVFS-WARNING **: 20:57:18.231: can't init metadata tree /home/zhongyuan/.local/share/gvfs-metadata/home: open: Permission denied
+
+(gedit:32151): GVFS-WARNING **: 20:57:18.231: can't init metadata tree /home/zhongyuan/.local/share/gvfs-metadata/home: open: Permission denied
+
+** (gedit:32151): WARNING **: 20:57:18.231: Set document metadata failed: Error setting file metadata: can’t open metadata tree

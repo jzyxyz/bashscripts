@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /usr/local/electronic-wechat/
+npm start &
