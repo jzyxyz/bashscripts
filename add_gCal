@@ -1,3 +1,0 @@
-#! /bin/bash
- 
-gcalcli --calendar 'NAME' --title 'Analysis of Algorithms Final' --where STHLM --when '02/03/2018 10:00' --duration 60 --description 'REMEMBER' --reminder 30 --who 'nanomalloc' add 

@@ -15,11 +15,9 @@ weekdays=( ["mån"]="mo" ["tis"]="di" ["ons"]="mi" ["tor"]="do" ["fre"]="fr" ["l
 #echo ${weekdays[${dow}]}
 URL="https://downloadzdf-a.akamaihd.net/mp4/zdf/$year/$month/${year}${month}${day}_${weekdays[${dow}]}_neu_lot/2/${year}${month}${day}_${weekdays[${dow}]}_neu_lot_3296k_p15v14.mp4"
 echo $URL
-ok=`curl $URL`
-if [ "$ok" = "Not found" ]  
+ok=$(curl -I $URL 2>/dev/null | head -n 1 | cut -d$' ' -f2)
+if [[ "$ok" -eq "200" ]];
 then 
-    echo "not yet updated!"  
-else 
     google-chrome --new-window "$URL"
 fi
 
