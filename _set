@@ -1,0 +1,36 @@
+#! /bin/bash
+
+set_gitignore() {
+    if [[ -e .gitignore ]]
+    then
+        code .gitignore
+    else
+        touch .gitignore
+        code .gitignore
+    fi 
+}
+_ESLINT_PATH=~/bashscripts/.eslintrc
+set_eslint() {
+    if [[ -e .eslintrc ]]
+    then
+        code .eslintrc
+    else
+        cp "$_ESLINT_PATH" .    
+        code .eslintrc
+    fi 
+
+}
+
+case "$1" in 
+    "gitignore")
+        echo $1
+        set_gitignore
+        ;;
+
+    "eslint")
+        set_eslint 
+        ;;
+        
+    *) 
+        echo "Not a valid argument" ;;
+esac 

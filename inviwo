@@ -1,4 +1,0 @@
-#! /bin/bash
-
-cd /usr/local/bin/inviwo-output
-nohup ./bin/inviwo &

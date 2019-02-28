@@ -1,0 +1,10 @@
+#! /bin/bash
+ 
+while IFS=';' read -r index filename length || [[ -n "$index" ]]; do
+    # echo $line
+    prefix="davisWiki/"
+    name=${filename#"$prefix"}
+    line=$(grep "^$name\s" $2)
+    newline="$index;${line%%[[:space:]]}"
+    echo $newline >> result
+done < "$1"
