@@ -1,5 +1,0 @@
-#! /bin/bash
-
-#${1?An argument is required}
-#${2?Two argument is required}
-

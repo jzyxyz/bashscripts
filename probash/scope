@@ -1,6 +1,0 @@
-#! /bin/bash
-
-content=
-shopt -s lastpipe
-echo $(ls -a) | read content
-echo $content
