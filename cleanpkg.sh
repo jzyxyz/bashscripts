@@ -1,5 +1,4 @@
 #! /bin/bash
- 
 
 sudo apt autoclean
 sudo apt-get clean

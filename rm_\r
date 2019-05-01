@@ -1,6 +1,0 @@
-#! /bin/bash
-
-for file in ./*.txt; do
-  tr -d '\r' <$file >${file%.txt}
-  yes 'y' | rm -f $file
-done

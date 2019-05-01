@@ -9,5 +9,6 @@ do
         break
     else
     mv $file $file.$1
+    echo "added suffix for $file"
     fi
 done
