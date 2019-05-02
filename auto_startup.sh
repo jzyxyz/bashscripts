@@ -1,4 +1,3 @@
 #!/bin/bash
-#open albert
 albert
-meteo
+nohup meteo > /dev/null 2>&1 &
