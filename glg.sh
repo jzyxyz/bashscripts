@@ -17,7 +17,7 @@ URL="https://downloadzdf-a.akamaihd.net/mp4/zdf/$year/$month/${year}${month}${da
 echo $URL
 ok=$(curl -I $URL 2>/dev/null | head -n 1 | cut -d$' ' -f2)
 if [[ "$ok" -eq "200" ]];
-then 
+then
     google-chrome --new-window "$URL"
 fi
 
